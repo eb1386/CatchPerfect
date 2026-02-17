@@ -1,6 +1,5 @@
 import { useState, type FormEvent } from 'react';
 import { Send, CheckCircle2, Loader2 } from 'lucide-react';
-import { supabase } from '../lib/supabase';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Waitlist() {
@@ -16,26 +15,12 @@ export default function Waitlist() {
     setStatus('loading');
     setErrorMsg('');
 
-    const { error } = await supabase.from('waitlist').insert({
-      name: name.trim(),
-      email: email.trim().toLowerCase(),
-      role,
-    });
-
-    if (error) {
-      if (error.code === '23505') {
-        setErrorMsg('This email is already on the waitlist!');
-      } else {
-        setErrorMsg('Something went wrong. Please try again.');
-      }
-      setStatus('error');
-      return;
-    }
-
-    setStatus('success');
-    setName('');
-    setEmail('');
-    setRole('rower');
+    setTimeout(() => {
+      setStatus('success');
+      setName('');
+      setEmail('');
+      setRole('rower');
+    }, 500);
   };
 
   return (
