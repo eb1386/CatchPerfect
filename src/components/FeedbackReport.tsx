@@ -112,7 +112,7 @@ export default function FeedbackReport() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="feedback" className="relative py-24 lg:py-32 bg-zinc-950 overflow-hidden">
+    <section id="feedback" className="relative py-16 lg:py-20 bg-zinc-950 overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
         backgroundSize: '40px 40px'
