@@ -1,20 +1,18 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Problem from './components/Problem';
-import HowItWorks from './components/HowItWorks';
-import Features from './components/Features';
+import FeedbackReport from './components/FeedbackReport';
+import Explore from './components/Explore';
 import About from './components/About';
 import Waitlist from './components/Waitlist';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-zinc-950">
       <Navbar />
       <Hero />
-      <Problem />
-      <HowItWorks />
-      <Features />
+      <FeedbackReport />
+      <Explore />
       <About />
       <Waitlist />
       <Footer />
