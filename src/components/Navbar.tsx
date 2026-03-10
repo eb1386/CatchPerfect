@@ -13,7 +13,7 @@ export default function Navbar() {
 
   const links = [
     { label: 'Feedback', href: '#feedback' },
-    { label: 'Explore', href: '#explore' },
+    { label: 'Why', href: '#explore' },
     { label: 'About', href: '#about' },
   ];
 

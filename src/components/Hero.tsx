@@ -18,14 +18,6 @@ export default function Hero() {
         yGap={40}
       />
 
-      <div className="absolute inset-0">
-        <img
-          src="https://images.pexels.com/photos/2403547/pexels-photo-2403547.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Rowing on calm water"
-          className="w-full h-full object-cover opacity-15"
-        />
-      </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 lg:py-40 w-full">
         <div className="max-w-3xl">
           <h1 className="opacity-0 animate-fade-in-up text-5xl sm:text-6xl lg:text-8xl font-extrabold text-white leading-[1.05] tracking-tight mb-8">
