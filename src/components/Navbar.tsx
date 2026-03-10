@@ -12,8 +12,9 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { label: 'Feedback', href: '#feedback' },
     { label: 'Why', href: '#explore' },
+    { label: 'How It Works', href: '#how' },
+    { label: 'Feedback', href: '#feedback' },
     { label: 'About', href: '#about' },
   ];
 
