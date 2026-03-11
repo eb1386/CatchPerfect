@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Marquee from './components/Marquee';
 import Explore from './components/Explore';
 import HowItWorks from './components/HowItWorks';
 import FeedbackReport from './components/FeedbackReport';
@@ -12,6 +13,7 @@ function App() {
     <div className="min-h-screen bg-zinc-950">
       <Navbar />
       <Hero />
+      <Marquee />
       <Explore />
       <HowItWorks />
       <FeedbackReport />

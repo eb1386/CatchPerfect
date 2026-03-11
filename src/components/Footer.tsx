@@ -54,7 +54,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-center gap-4">
           <p className="text-xs text-zinc-700">
-            &copy; {new Date().getFullYear()} Catch Perfect. Created by Kyle Biemold.
+            &copy; {new Date().getFullYear()} Catch Perfect. By Kyle Biemold '28 and Evan Borodow '29.
           </p>
         </div>
       </div>
