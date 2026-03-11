@@ -1,7 +1,8 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { Smartphone, Activity, BarChart3 } from 'lucide-react';
+import { Smartphone, Activity, BarChart3, ArrowRight } from 'lucide-react';
 
 const steps = [
   {
@@ -9,7 +10,6 @@ const steps = [
     title: 'Mount the Sensor',
     description:
       'Attach the lightweight Catch Perfect sensor to your oar. It takes seconds to clip on and won\'t affect your stroke. The sensor uses a combination of accelerometers and gyroscopes to capture every movement of the oar throughout the rowing stroke.',
-    details: ['Under 30g weight', 'Waterproof IP68', 'Clips in seconds'],
     color: '#10b981',
     colorLight: 'rgba(16, 185, 129, 0.12)',
     colorBorder: 'rgba(16, 185, 129, 0.25)',
@@ -19,7 +19,6 @@ const steps = [
     title: 'Row Like Normal',
     description:
       'There\'s nothing to change about your routine. Just row. The sensor captures hundreds of data points per stroke, measuring blade entry angle, drive force curve, recovery timing, handle speed, and body sequencing in real time.',
-    details: ['200+ data points per stroke', 'Real-time capture', 'Zero interference'],
     color: '#0ea5e9',
     colorLight: 'rgba(14, 165, 233, 0.12)',
     colorBorder: 'rgba(14, 165, 233, 0.25)',
@@ -29,7 +28,6 @@ const steps = [
     title: 'Get Your Breakdown',
     description:
       'When your session ends, a detailed report is delivered straight to your phone. Every phase of the stroke is scored individually with specific, actionable feedback on what to fix and how to fix it.',
-    details: ['Phase-by-phase scoring', 'Actionable insights', 'Progress tracking'],
     color: '#f59e0b',
     colorLight: 'rgba(245, 158, 11, 0.12)',
     colorBorder: 'rgba(245, 158, 11, 0.25)',
@@ -152,16 +150,14 @@ export default function HowItWorks() {
                       <h3 className="text-2xl lg:text-3xl font-bold text-white">{activeStep.title}</h3>
                     </div>
                     <p className="text-base text-zinc-400 leading-relaxed mt-5">{activeStep.description}</p>
-                    <ul className="mt-6 space-y-3">
-                      {activeStep.details.map((detail) => (
-                        <li key={detail} className="flex items-center gap-3">
-                          <svg className="w-4 h-4 flex-shrink-0" style={{ color: activeStep.color }} fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span className="text-sm text-zinc-300">{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <Link
+                      to="/user"
+                      className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:opacity-85 hover:gap-3"
+                      style={{ backgroundColor: activeStep.color }}
+                    >
+                      See What Users See
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </div>
                 </HiwContentWrapper>
 
