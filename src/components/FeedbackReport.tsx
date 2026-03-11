@@ -1,4 +1,5 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { ArrowUpRight } from 'lucide-react';
 import Stepper, { Step } from './Stepper';
 
 const catchData = {
@@ -124,10 +125,19 @@ export default function FeedbackReport() {
             Your Post-Row
             <span className="font-serif italic text-emerald-400"> Breakdown</span>
           </h2>
-          <p className="text-lg text-zinc-500 leading-relaxed">
+          <p className="text-lg text-zinc-500 leading-relaxed mb-6">
             After every session, get a detailed analysis of every phase of your stroke.
             Pinpoint exactly where to improve.
           </p>
+          <a
+            href="/user"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white text-sm font-semibold hover:bg-emerald-400 transition-colors"
+          >
+            See a Demo
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
         </div>
 
         <div className={`grid lg:grid-cols-2 gap-12 items-start transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
