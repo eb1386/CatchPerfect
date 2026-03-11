@@ -152,28 +152,22 @@ export default function HowItWorks() {
                       <h3 className="text-2xl lg:text-3xl font-bold text-white">{activeStep.title}</h3>
                     </div>
                     <p className="text-base text-zinc-400 leading-relaxed mt-5">{activeStep.description}</p>
-                    <div className="flex flex-wrap gap-2 mt-6">
+                    <ul className="mt-6 space-y-3">
                       {activeStep.details.map((detail) => (
-                        <span
-                          key={detail}
-                          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border"
-                          style={{
-                            backgroundColor: activeStep.colorLight,
-                            borderColor: activeStep.colorBorder,
-                            color: activeStep.color,
-                          }}
-                        >
-                          <span className="w-1 h-1 rounded-full" style={{ backgroundColor: activeStep.color }} />
-                          {detail}
-                        </span>
+                        <li key={detail} className="flex items-center gap-3">
+                          <svg className="w-4 h-4 flex-shrink-0" style={{ color: activeStep.color }} fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span className="text-sm text-zinc-300">{detail}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 </HiwContentWrapper>
 
                 <div className="hiw-nav-row">
                   {currentStep > 1 ? (
-                    <button onClick={handleBack} className="hiw-back-btn">Previous</button>
+                    <button onClick={handleBack} className="hiw-prev-btn">Previous</button>
                   ) : (
                     <div />
                   )}

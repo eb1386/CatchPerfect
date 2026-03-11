@@ -8,29 +8,21 @@ const problems = [
     icon: Users,
     title: 'Coaches Are Stretched Thin',
     description: 'Most programs have one coach for dozens of athletes. Individual attention is nearly impossible during practice.',
-    stat: '1:25',
-    statLabel: 'avg coach-to-athlete ratio',
   },
   {
     icon: Clock,
     title: 'Feedback Comes Too Late',
     description: 'By the time a coach spots a technique error and gets to correct it, the rower has already repeated it hundreds of times.',
-    stat: '48h',
-    statLabel: 'avg delay for feedback',
   },
   {
     icon: AlertTriangle,
     title: 'Bad Habits Form Fast',
     description: 'Without real-time correction, small mistakes become deeply ingrained habits that are exponentially harder to fix later.',
-    stat: '3x',
-    statLabel: 'harder to fix ingrained habits',
   },
   {
     icon: TrendingDown,
     title: 'Progress Stalls Without Data',
     description: 'Rowers have no way to objectively track their technique over time. Improvement becomes guesswork instead of science.',
-    stat: '0',
-    statLabel: 'objective data points for most rowers',
   },
 ];
 
@@ -72,17 +64,12 @@ export default function Explore() {
                         {problem.title}
                       </span>
                     </div>
-                    <div className="flex items-center gap-4">
-                      {!isOpen && (
-                        <span className="hidden sm:block text-2xl font-bold text-zinc-700 font-mono">{problem.stat}</span>
-                      )}
-                      <motion.div
-                        animate={{ rotate: isOpen ? 90 : 0 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <ChevronRight className="w-5 h-5 text-zinc-600" />
-                      </motion.div>
-                    </div>
+                    <motion.div
+                      animate={{ rotate: isOpen ? 90 : 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <ChevronRight className="w-5 h-5 text-zinc-600" />
+                    </motion.div>
                   </div>
                   <AnimatePresence initial={false}>
                     {isOpen && (
@@ -94,11 +81,7 @@ export default function Explore() {
                         className="overflow-hidden"
                       >
                         <div className="explore-accordion-body">
-                          <p className="text-sm lg:text-base text-zinc-400 leading-relaxed flex-1">{problem.description}</p>
-                          <div className="explore-stat-block">
-                            <span className="text-3xl lg:text-4xl font-bold text-emerald-400 font-mono">{problem.stat}</span>
-                            <span className="text-xs text-zinc-500 mt-1 leading-tight">{problem.statLabel}</span>
-                          </div>
+                          <p className="text-sm lg:text-base text-zinc-400 leading-relaxed">{problem.description}</p>
                         </div>
                       </motion.div>
                     )}
