@@ -5,30 +5,30 @@ import Stepper, { Step } from './Stepper';
 const catchData = {
   score: 87,
   metrics: [
-    { label: 'Blade Entry Angle', value: '42deg', target: '45deg', status: 'good' },
-    { label: 'Catch Timing', value: '0.12s', target: '< 0.15s', status: 'great' },
+    { label: 'Blade Entry Angle', value: '43 deg', target: '45 deg', status: 'good' },
+    { label: 'Catch Timing', value: '0.11s', target: '< 0.15s', status: 'great' },
     { label: 'Handle Speed', value: '2.1 m/s', target: '2.3 m/s', status: 'improve' },
-    { label: 'Body Angle at Catch', value: '28deg', target: '30deg', status: 'good' },
+    { label: 'Body Angle at Catch', value: '28 deg', target: '30 deg', status: 'good' },
   ],
 };
 
 const driveData = {
   score: 91,
   metrics: [
-    { label: 'Leg Drive Power', value: '340W', target: '320W', status: 'great' },
-    { label: 'Sequencing', value: '94%', target: '90%', status: 'great' },
+    { label: 'Leg Drive Power', value: '348W', target: '320W', status: 'great' },
+    { label: 'Sequencing', value: '95%', target: '90%', status: 'great' },
     { label: 'Handle Height', value: 'Consistent', target: 'Consistent', status: 'great' },
     { label: 'Posture', value: '88%', target: '85%', status: 'good' },
   ],
 };
 
 const recoveryData = {
-  score: 74,
+  score: 78,
   metrics: [
     { label: 'Recovery Time', value: '1.8s', target: '2.0s', status: 'improve' },
-    { label: 'Hand Speed', value: 'Too fast', target: 'Controlled', status: 'improve' },
-    { label: 'Body Preparation', value: 'Late', target: 'Early', status: 'improve' },
-    { label: 'Slide Control', value: '78%', target: '85%', status: 'good' },
+    { label: 'Hand Speed', value: 'Controlled', target: 'Controlled', status: 'good' },
+    { label: 'Body Preparation', value: 'On time', target: 'Early', status: 'good' },
+    { label: 'Slide Control', value: '82%', target: '85%', status: 'good' },
   ],
 };
 
@@ -36,7 +36,7 @@ const sessionSummary = {
   totalStrokes: 847,
   avgRate: 26,
   duration: '42:15',
-  overallScore: 84,
+  overallScore: 87,
   improvement: '+3',
 };
 
@@ -145,7 +145,7 @@ export default function FeedbackReport() {
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h3 className="text-lg font-bold text-white">Session Report</h3>
-                <p className="text-sm text-zinc-500 mt-0.5">March 8, 2026 - Morning Row</p>
+                <p className="text-sm text-zinc-500 mt-0.5">March 9, 2026 - Morning Row</p>
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
@@ -181,8 +181,8 @@ export default function FeedbackReport() {
             <div className="rounded-xl bg-white/[0.03] border border-white/5 p-4 mt-6">
               <h4 className="text-sm font-semibold text-zinc-300 mb-1">Key Insight</h4>
               <p className="text-sm text-zinc-500 leading-relaxed">
-                Your recovery phase is rushed. Focus on slowing your hands away from the body
-                and letting the slide follow naturally. This will also improve your catch timing.
+                Recovery has improved but still has room to grow. Focus on maintaining
+                slide control in the final 500m when fatigue sets in.
               </p>
             </div>
           </div>

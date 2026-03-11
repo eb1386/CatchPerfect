@@ -12,7 +12,7 @@ const sessions = [
     overallScore: 87,
     avgRate: 26,
     distance: '8.2 km',
-    catchScore: 89,
+    catchScore: 87,
     driveScore: 91,
     recoveryScore: 78,
     metrics: [
@@ -25,7 +25,7 @@ const sessions = [
       { label: 'Body Prep Timing', value: 'On time', status: 'great' },
       { label: 'Handle Height', value: 'Consistent', status: 'great' },
     ],
-    insight: 'Strong session overall. Catch timing has improved significantly from last week. Focus on maintaining slide control during the last 500m when fatigue sets in.',
+    insight: 'Strong session overall. Recovery has improved but still has room to grow. Focus on maintaining slide control during the last 500m when fatigue sets in.',
   },
   {
     id: 2,

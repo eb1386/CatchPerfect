@@ -97,7 +97,7 @@ export default function DashboardStartNow() {
                 { label: 'Total Sessions', value: '23' },
                 { label: 'Total Strokes', value: '18,420' },
                 { label: 'Current Streak', value: '5 days' },
-                { label: 'Best Score', value: '91' },
+                { label: 'Best Score', value: '87' },
               ].map((stat) => (
                 <div key={stat.label} className="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
                   <span className="text-sm text-zinc-500">{stat.label}</span>

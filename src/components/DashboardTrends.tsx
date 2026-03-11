@@ -7,8 +7,8 @@ const weeklyScores = [
   { week: 'W4', overall: 76, catch: 76, drive: 80, recovery: 70 },
   { week: 'W5', overall: 79, catch: 80, drive: 82, recovery: 72 },
   { week: 'W6', overall: 81, catch: 82, drive: 85, recovery: 73 },
-  { week: 'W7', overall: 83, catch: 85, drive: 88, recovery: 74 },
-  { week: 'W8', overall: 84, catch: 87, drive: 91, recovery: 74 },
+  { week: 'W7', overall: 84, catch: 84, drive: 88, recovery: 75 },
+  { week: 'W8', overall: 87, catch: 87, drive: 91, recovery: 78 },
 ];
 
 const phaseProgress = [
@@ -22,7 +22,7 @@ const phaseProgress = [
     milestones: [
       { label: 'First session', week: 'W1', score: 65 },
       { label: 'Broke 80', week: 'W5', score: 80 },
-      { label: 'Current best', week: 'W8', score: 89 },
+      { label: 'Current best', week: 'W8', score: 87 },
     ],
   },
   {
@@ -35,31 +35,31 @@ const phaseProgress = [
     milestones: [
       { label: 'First session', week: 'W1', score: 72 },
       { label: 'Broke 85', week: 'W6', score: 85 },
-      { label: 'Current best', week: 'W8', score: 93 },
+      { label: 'Current best', week: 'W8', score: 91 },
     ],
   },
   {
     label: 'Recovery',
-    current: 74,
+    current: 78,
     start: 64,
-    change: '+10',
-    trend: 'flat' as const,
+    change: '+14',
+    trend: 'up' as const,
     color: '#f59e0b',
     milestones: [
       { label: 'First session', week: 'W1', score: 64 },
-      { label: 'Plateau start', week: 'W5', score: 72 },
-      { label: 'Current', week: 'W8', score: 74 },
+      { label: 'Broke 70', week: 'W4', score: 70 },
+      { label: 'Current', week: 'W8', score: 78 },
     ],
   },
 ];
 
 const personalRecords = [
-  { label: 'Best Overall Score', value: '91', date: 'Mar 9, 2026', change: '+7 from avg' },
-  { label: 'Best Catch Score', value: '89', date: 'Mar 9, 2026', change: '+2 from avg' },
-  { label: 'Best Drive Score', value: '93', date: 'Mar 7, 2026', change: '+2 from avg' },
-  { label: 'Longest Streak', value: '8 days', date: 'Feb 28, 2026', change: '' },
-  { label: 'Most Strokes (Session)', value: '1,204', date: 'Feb 22, 2026', change: '' },
-  { label: 'Highest Avg Rate', value: '29 SPM', date: 'Mar 3, 2026', change: '' },
+  { label: 'Best Overall Score', value: '87', date: 'Mar 9, 2026', change: '+3 from avg' },
+  { label: 'Best Catch Score', value: '87', date: 'Mar 9, 2026', change: '+1 from avg' },
+  { label: 'Best Drive Score', value: '91', date: 'Mar 9, 2026', change: '+2 from avg' },
+  { label: 'Longest Streak', value: '5 days', date: 'Mar 9, 2026', change: '' },
+  { label: 'Most Strokes (Session)', value: '901', date: 'Mar 5, 2026', change: '' },
+  { label: 'Highest Avg Rate', value: '26 SPM', date: 'Mar 9, 2026', change: '' },
 ];
 
 function ChartBar({ value, max, color, label }: { value: number; max: number; color: string; label: string }) {
@@ -147,11 +147,11 @@ export default function DashboardTrends() {
           </div>
           <div>
             <span className="text-xs text-zinc-600">Current Score</span>
-            <p className="text-lg font-bold text-emerald-400 font-mono">84</p>
+            <p className="text-lg font-bold text-emerald-400 font-mono">87</p>
           </div>
           <div>
             <span className="text-xs text-zinc-600">8-Week Gain</span>
-            <p className="text-lg font-bold text-emerald-400 font-mono">+16</p>
+            <p className="text-lg font-bold text-emerald-400 font-mono">+19</p>
           </div>
         </div>
       </div>
@@ -216,12 +216,12 @@ export default function DashboardTrends() {
       <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-6">
         <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-3">AI Summary</h3>
         <p className="text-sm text-zinc-400 leading-relaxed">
-          Over the past 8 weeks, your overall technique score has improved by 16 points.
+          Over the past 8 weeks, your overall technique score has improved by 19 points (68 to 87).
           Your drive phase is your strongest area, consistently scoring above 85 since week 6.
           The catch phase has seen the most improvement (+22 points).
-          Your recovery phase has plateaued around 72-74 for the past 3 weeks -- this is now the biggest
-          opportunity for improvement. Slowing the hand speed away from the body and preparing the body angle
-          earlier will likely unlock the next phase of gains.
+          Your recovery phase is trending upward (+14 points) but remains the biggest
+          opportunity for further improvement. Focus on maintaining slide control in the
+          final meters of each piece when fatigue sets in.
         </p>
       </div>
     </div>
