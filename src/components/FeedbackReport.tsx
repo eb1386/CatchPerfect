@@ -1,6 +1,8 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { ArrowUpRight } from 'lucide-react';
 import Stepper, { Step } from './Stepper';
+import BeginnerTip from './BeginnerTip';
+import { coachingTips } from '../data/coachingTips';
 
 const catchData = {
   score: 87,
@@ -62,15 +64,20 @@ function MetricsTable({ metrics }: { metrics: typeof catchData.metrics }) {
   return (
     <div className="space-y-3 mt-4">
       {metrics.map((m, i) => (
-        <div key={i} className="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
-          <div>
-            <div className="text-sm font-medium text-white">{m.label}</div>
-            <div className="text-xs text-zinc-500 mt-0.5">Target: {m.target}</div>
+        <div key={i} className="py-2 border-b border-white/5 last:border-0">
+          <div className="flex items-center justify-between">
+            <div>
+              <div className="text-sm font-medium text-white">{m.label}</div>
+              <div className="text-xs text-zinc-500 mt-0.5">Target: {m.target}</div>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-sm font-mono text-zinc-300">{m.value}</span>
+              <StatusBadge status={m.status} />
+            </div>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="text-sm font-mono text-zinc-300">{m.value}</span>
-            <StatusBadge status={m.status} />
-          </div>
+          {coachingTips[m.label] && (
+            <BeginnerTip tip={coachingTips[m.label]} status={m.status} />
+          )}
         </div>
       ))}
     </div>
