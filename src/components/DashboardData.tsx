@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Activity, ChevronRight, Zap, Timer, Target } from 'lucide-react';
-import BeginnerTip from './BeginnerTip';
-import { coachingTips } from '../data/coachingTips';
+import BeginnerCoach from './BeginnerCoach';
 
 const sessions = [
   {
@@ -195,25 +194,22 @@ export default function DashboardData() {
                 </div>
               ))}
             </div>
+
+            <BeginnerCoach metrics={selected.metrics} />
           </div>
 
           <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-6">
             <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-4">Detailed Metrics</h3>
             <div className="space-y-0">
               {selected.metrics.map((m, i) => (
-                <div key={i} className="py-3 border-b border-white/5 last:border-0">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-zinc-300">{m.label}</span>
-                    <div className="flex items-center gap-3">
-                      <span className="text-sm font-mono text-zinc-400">{m.value}</span>
-                      <span className={`px-2.5 py-1 rounded text-xs font-medium ${statusColors[m.status].text} ${statusColors[m.status].bg}`}>
-                        {statusLabels[m.status]}
-                      </span>
-                    </div>
+                <div key={i} className="flex items-center justify-between py-3 border-b border-white/5 last:border-0">
+                  <span className="text-sm text-zinc-300">{m.label}</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-mono text-zinc-400">{m.value}</span>
+                    <span className={`px-2.5 py-1 rounded text-xs font-medium ${statusColors[m.status].text} ${statusColors[m.status].bg}`}>
+                      {statusLabels[m.status]}
+                    </span>
                   </div>
-                  {coachingTips[m.label] && (
-                    <BeginnerTip tip={coachingTips[m.label]} status={m.status} />
-                  )}
                 </div>
               ))}
             </div>

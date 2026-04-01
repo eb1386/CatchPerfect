@@ -1,4 +1,8 @@
-import type { CoachingTip } from '../components/BeginnerTip';
+export interface CoachingTip {
+  analogy: string;
+  drill: string;
+  why: string;
+}
 
 export const coachingTips: Record<string, CoachingTip> = {
   'Blade Entry Angle': {

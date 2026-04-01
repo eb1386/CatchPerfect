@@ -1,8 +1,7 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { ArrowUpRight } from 'lucide-react';
 import Stepper, { Step } from './Stepper';
-import BeginnerTip from './BeginnerTip';
-import { coachingTips } from '../data/coachingTips';
+import BeginnerCoach from './BeginnerCoach';
 
 const catchData = {
   score: 87,
@@ -64,20 +63,15 @@ function MetricsTable({ metrics }: { metrics: typeof catchData.metrics }) {
   return (
     <div className="space-y-3 mt-4">
       {metrics.map((m, i) => (
-        <div key={i} className="py-2 border-b border-white/5 last:border-0">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="text-sm font-medium text-white">{m.label}</div>
-              <div className="text-xs text-zinc-500 mt-0.5">Target: {m.target}</div>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-sm font-mono text-zinc-300">{m.value}</span>
-              <StatusBadge status={m.status} />
-            </div>
+        <div key={i} className="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
+          <div>
+            <div className="text-sm font-medium text-white">{m.label}</div>
+            <div className="text-xs text-zinc-500 mt-0.5">Target: {m.target}</div>
           </div>
-          {coachingTips[m.label] && (
-            <BeginnerTip tip={coachingTips[m.label]} status={m.status} />
-          )}
+          <div className="flex items-center gap-3">
+            <span className="text-sm font-mono text-zinc-300">{m.value}</span>
+            <StatusBadge status={m.status} />
+          </div>
         </div>
       ))}
     </div>
@@ -185,7 +179,13 @@ export default function FeedbackReport() {
               <ScoreRing score={recoveryData.score} label="Recovery" />
             </div>
 
-            <div className="rounded-xl bg-white/[0.03] border border-white/5 p-4 mt-6">
+            <div className="mt-6">
+              <BeginnerCoach
+                metrics={[...catchData.metrics, ...driveData.metrics, ...recoveryData.metrics]}
+              />
+            </div>
+
+            <div className="rounded-xl bg-white/[0.03] border border-white/5 p-4 mt-4">
               <h4 className="text-sm font-semibold text-zinc-300 mb-1">Key Insight</h4>
               <p className="text-sm text-zinc-500 leading-relaxed">
                 Recovery has improved but still has room to grow. Focus on maintaining
