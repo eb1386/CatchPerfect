@@ -24,7 +24,7 @@ export default function About() {
 
           <div className="lg:col-span-3">
             <div className="relative mb-8">
-              <blockquote className="relative z-10 pl-6 border-l-2 border-emerald-500">
+              <blockquote className="relative z-10 pl-6 border-l-2 border-brand-400">
                 <p className="text-xl lg:text-2xl text-zinc-200 leading-relaxed font-light italic">
                   I noticed that beginner rowers on my team weren't getting the individual feedback they needed.
                   Coaches are stretched thin, and by the time mistakes get corrected, they're already habits.
@@ -35,7 +35,7 @@ export default function About() {
 
             <div>
               <h3 className="text-2xl font-bold text-white mb-1">Kyle Biemold</h3>
-              <p className="text-emerald-400 font-medium mb-4">Founder & Creator</p>
+              <p className="text-brand-400 font-medium mb-4">Founder & Creator</p>
               <p className="text-zinc-500 leading-relaxed">
                 As a coxswain, Kyle saw how beginner rowers struggled without consistent coaching.
                 He created Catch Perfect to bring elite-level technique feedback to every athlete.

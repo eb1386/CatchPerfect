@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="max-w-3xl">
           <h1 className="opacity-0 animate-fade-in-up text-5xl sm:text-6xl lg:text-8xl font-extrabold text-white leading-[1.05] tracking-tight mb-8">
             Master Your
-            <span className="block font-serif italic text-emerald-400 mt-2">
+            <span className="block font-serif italic text-brand-400 mt-2">
               Rowing Form
             </span>
           </h1>

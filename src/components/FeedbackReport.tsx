@@ -43,7 +43,7 @@ const sessionSummary = {
 
 function StatusBadge({ status }: { status: string }) {
   const colors: Record<string, string> = {
-    great: 'bg-emerald-500/20 text-emerald-400',
+    great: 'bg-brand-400/20 text-brand-400',
     good: 'bg-sky-500/20 text-sky-400',
     improve: 'bg-amber-500/20 text-amber-400',
   };
@@ -81,7 +81,7 @@ function MetricsTable({ metrics }: { metrics: typeof catchData.metrics }) {
 function ScoreRing({ score, label }: { score: number; label: string }) {
   const circumference = 2 * Math.PI * 40;
   const offset = circumference - (score / 100) * circumference;
-  const color = score >= 85 ? '#10b981' : score >= 75 ? '#0ea5e9' : '#f59e0b';
+  const color = score >= 85 ? '#fec205' : score >= 75 ? '#0ea5e9' : '#f59e0b';
 
   return (
     <div className="flex flex-col items-center">
@@ -124,7 +124,7 @@ export default function FeedbackReport() {
         <div className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
             Your Post-Row
-            <span className="font-serif italic text-emerald-400"> Breakdown</span>
+            <span className="font-serif italic text-brand-400"> Breakdown</span>
           </h2>
           <p className="text-lg text-zinc-500 leading-relaxed mb-6">
             After every session, get a detailed analysis of every phase of your stroke.
@@ -134,7 +134,7 @@ export default function FeedbackReport() {
             href="/user"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-white text-sm font-semibold hover:bg-emerald-400 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-400 text-brand-dark text-sm font-semibold hover:bg-brand-300 transition-colors"
           >
             See a Demo
             <ArrowUpRight className="w-4 h-4" />
@@ -148,9 +148,9 @@ export default function FeedbackReport() {
                 <h3 className="text-lg font-bold text-white">Session Report</h3>
                 <p className="text-sm text-zinc-500 mt-0.5">March 9, 2026 - Morning Row</p>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                <span className="text-xs font-semibold text-emerald-400">{sessionSummary.improvement} vs last</span>
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-400/10 border border-brand-400/20">
+                <div className="w-1.5 h-1.5 rounded-full bg-brand-400" />
+                <span className="text-xs font-semibold text-brand-400">{sessionSummary.improvement} vs last</span>
               </div>
             </div>
 
@@ -168,7 +168,7 @@ export default function FeedbackReport() {
                 <div className="text-xs text-zinc-500 mt-1">Duration</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-emerald-400 font-mono">{sessionSummary.overallScore}</div>
+                <div className="text-2xl font-bold text-brand-400 font-mono">{sessionSummary.overallScore}</div>
                 <div className="text-xs text-zinc-500 mt-1">Score</div>
               </div>
             </div>
@@ -201,13 +201,13 @@ export default function FeedbackReport() {
               onFinalStepCompleted={() => {}}
               backButtonText="Previous"
               nextButtonText="Next Phase"
-              accentColor="#10b981"
+              accentColor="#fec205"
             >
               <Step>
                 <div className="pb-4">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                      <span className="text-lg font-bold text-emerald-400">1</span>
+                    <div className="w-10 h-10 rounded-full bg-brand-400/10 flex items-center justify-center">
+                      <span className="text-lg font-bold text-brand-400">1</span>
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-white">The Catch</h3>

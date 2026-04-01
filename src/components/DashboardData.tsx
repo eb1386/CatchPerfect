@@ -81,7 +81,7 @@ const sessions = [
 ];
 
 const statusColors: Record<string, { text: string; bg: string }> = {
-  great: { text: 'text-emerald-400', bg: 'bg-emerald-500/10' },
+  great: { text: 'text-brand-400', bg: 'bg-brand-400/10' },
   good: { text: 'text-sky-400', bg: 'bg-sky-500/10' },
   improve: { text: 'text-amber-400', bg: 'bg-amber-500/10' },
 };
@@ -93,13 +93,13 @@ const statusLabels: Record<string, string> = {
 };
 
 function scoreColor(s: number) {
-  if (s >= 85) return 'text-emerald-400';
+  if (s >= 85) return 'text-brand-400';
   if (s >= 80) return 'text-sky-400';
   return 'text-amber-400';
 }
 
 function scoreBg(s: number) {
-  if (s >= 85) return 'bg-emerald-500/10';
+  if (s >= 85) return 'bg-brand-400/10';
   if (s >= 80) return 'bg-sky-500/10';
   return 'bg-amber-500/10';
 }
@@ -123,7 +123,7 @@ export default function DashboardData() {
               onClick={() => setSelectedId(s.id)}
               className={`w-full flex items-center gap-3 p-4 rounded-xl border text-left transition-all ${
                 selectedId === s.id
-                  ? 'border-emerald-500/30 bg-emerald-500/5'
+                  ? 'border-brand-400/30 bg-brand-400/5'
                   : 'border-white/5 bg-white/[0.02] hover:bg-white/[0.04]'
               }`}
             >
@@ -186,7 +186,7 @@ export default function DashboardData() {
                         className="h-full rounded-full transition-all duration-500"
                         style={{
                           width: `${phase.score}%`,
-                          backgroundColor: phase.score >= 85 ? '#10b981' : phase.score >= 80 ? '#0ea5e9' : '#f59e0b',
+                          backgroundColor: phase.score >= 85 ? '#fec205' : phase.score >= 80 ? '#0ea5e9' : '#f59e0b',
                         }}
                       />
                     </div>

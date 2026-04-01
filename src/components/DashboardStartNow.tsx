@@ -39,7 +39,7 @@ export default function DashboardStartNow() {
                 <button
                   onClick={handleConnect}
                   disabled={connecting}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-500 text-white text-sm font-semibold hover:bg-emerald-400 transition-colors disabled:opacity-50"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-400 text-brand-dark text-sm font-semibold hover:bg-brand-300 transition-colors disabled:opacity-50"
                 >
                   <Bluetooth className="w-4 h-4" />
                   {connecting ? 'Connecting...' : 'Connect Sensor'}
@@ -47,8 +47,8 @@ export default function DashboardStartNow() {
               </div>
             ) : (
               <div>
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-emerald-500/5 border border-emerald-500/10 mb-5">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-brand-400/5 border border-brand-400/10 mb-5">
+                  <CheckCircle2 className="w-5 h-5 text-brand-400 flex-shrink-0" />
                   <div>
                     <p className="text-sm font-medium text-white">Catch Perfect Sensor v2</p>
                     <p className="text-xs text-zinc-500">Connected via Bluetooth LE</p>
@@ -56,7 +56,7 @@ export default function DashboardStartNow() {
                 </div>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="flex items-center gap-2.5 p-3 rounded-lg bg-zinc-800/50">
-                    <Battery className="w-4 h-4 text-emerald-400" />
+                    <Battery className="w-4 h-4 text-brand-400" />
                     <div>
                       <p className="text-xs text-zinc-500">Battery</p>
                       <p className="text-sm font-semibold text-white">94%</p>
@@ -82,7 +82,7 @@ export default function DashboardStartNow() {
           </div>
 
           {connected && (
-            <button className="w-full flex items-center justify-center gap-3 px-8 py-5 rounded-2xl bg-emerald-500 text-white text-lg font-bold hover:bg-emerald-400 transition-colors">
+            <button className="w-full flex items-center justify-center gap-3 px-8 py-5 rounded-2xl bg-brand-400 text-brand-dark text-lg font-bold hover:bg-brand-300 transition-colors">
               <Play className="w-6 h-6" />
               Start Rowing Session
             </button>
@@ -118,10 +118,10 @@ export default function DashboardStartNow() {
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className={`w-5 h-5 rounded flex items-center justify-center flex-shrink-0 ${
-                    item.done ? 'bg-emerald-500/15' : 'bg-zinc-800'
+                    item.done ? 'bg-brand-400/15' : 'bg-zinc-800'
                   }`}>
                     {item.done && (
-                      <svg className="w-3 h-3 text-emerald-400" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
+                      <svg className="w-3 h-3 text-brand-400" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                     )}

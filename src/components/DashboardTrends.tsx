@@ -18,7 +18,7 @@ const phaseProgress = [
     start: 65,
     change: '+22',
     trend: 'up' as const,
-    color: '#10b981',
+    color: '#fec205',
     milestones: [
       { label: 'First session', week: 'W1', score: 65 },
       { label: 'Broke 80', week: 'W5', score: 80 },
@@ -79,7 +79,7 @@ function ChartBar({ value, max, color, label }: { value: number; max: number; co
 }
 
 function TrendIcon({ trend }: { trend: 'up' | 'down' | 'flat' }) {
-  if (trend === 'up') return <ArrowUp className="w-3.5 h-3.5 text-emerald-400" />;
+  if (trend === 'up') return <ArrowUp className="w-3.5 h-3.5 text-brand-400" />;
   if (trend === 'down') return <ArrowDown className="w-3.5 h-3.5 text-red-400" />;
   return <Minus className="w-3.5 h-3.5 text-amber-400" />;
 }
@@ -99,7 +99,7 @@ export default function DashboardTrends() {
               <h3 className="text-sm font-semibold text-zinc-400">{phase.label}</h3>
               <div className="flex items-center gap-1">
                 <TrendIcon trend={phase.trend} />
-                <span className="text-xs font-bold text-emerald-400">{phase.change}</span>
+                <span className="text-xs font-bold text-brand-400">{phase.change}</span>
               </div>
             </div>
             <div className="flex items-end gap-3 mb-4">
@@ -132,12 +132,12 @@ export default function DashboardTrends() {
 
       <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 mb-8">
         <div className="flex items-center gap-3 mb-6">
-          <TrendingUp className="w-5 h-5 text-emerald-400" />
+          <TrendingUp className="w-5 h-5 text-brand-400" />
           <h2 className="text-lg font-bold text-white">Overall Score Over Time</h2>
         </div>
         <div className="flex items-end gap-2">
           {weeklyScores.map((w) => (
-            <ChartBar key={w.week} value={w.overall} max={100} color="#10b981" label={w.week} />
+            <ChartBar key={w.week} value={w.overall} max={100} color="#fec205" label={w.week} />
           ))}
         </div>
         <div className="mt-6 pt-4 border-t border-white/5 grid grid-cols-3 gap-4">
@@ -147,11 +147,11 @@ export default function DashboardTrends() {
           </div>
           <div>
             <span className="text-xs text-zinc-600">Current Score</span>
-            <p className="text-lg font-bold text-emerald-400 font-mono">87</p>
+            <p className="text-lg font-bold text-brand-400 font-mono">87</p>
           </div>
           <div>
             <span className="text-xs text-zinc-600">8-Week Gain</span>
-            <p className="text-lg font-bold text-emerald-400 font-mono">+19</p>
+            <p className="text-lg font-bold text-brand-400 font-mono">+19</p>
           </div>
         </div>
       </div>
@@ -164,7 +164,7 @@ export default function DashboardTrends() {
               <div key={w.week} className="flex-1 space-y-1">
                 <div className="flex flex-col gap-0.5">
                   {[
-                    { val: w.catch, color: '#10b981' },
+                    { val: w.catch, color: '#fec205' },
                     { val: w.drive, color: '#0ea5e9' },
                     { val: w.recovery, color: '#f59e0b' },
                   ].map((bar, i) => (
@@ -182,7 +182,7 @@ export default function DashboardTrends() {
           </div>
           <div className="mt-4 pt-3 border-t border-white/5 flex items-center gap-6">
             {[
-              { label: 'Catch', color: '#10b981' },
+              { label: 'Catch', color: '#fec205' },
               { label: 'Drive', color: '#0ea5e9' },
               { label: 'Recovery', color: '#f59e0b' },
             ].map((l) => (
@@ -205,7 +205,7 @@ export default function DashboardTrends() {
                 </div>
                 <div className="text-right">
                   <p className="text-sm font-bold text-white font-mono">{pr.value}</p>
-                  {pr.change && <p className="text-xs text-emerald-400">{pr.change}</p>}
+                  {pr.change && <p className="text-xs text-brand-400">{pr.change}</p>}
                 </div>
               </div>
             ))}

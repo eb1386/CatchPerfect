@@ -24,7 +24,7 @@ export default function UserDashboard() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-baseline gap-0.5">
             <span className="text-xl font-bold text-white tracking-tight">Catch</span>
-            <span className="text-xl font-serif italic text-emerald-400 tracking-tight">Perfect</span>
+            <span className="text-xl font-serif italic text-brand-400 tracking-tight">Perfect</span>
           </Link>
 
           <nav className="hidden sm:flex items-center">
@@ -41,7 +41,7 @@ export default function UserDashboard() {
                 <tab.icon className="w-4 h-4" />
                 {tab.label}
                 {activeTab === tab.id && (
-                  <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-emerald-500 rounded-full" />
+                  <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-brand-400 rounded-full" />
                 )}
               </button>
             ))}
@@ -55,7 +55,7 @@ export default function UserDashboard() {
               <img
                 src="https://images.pexels.com/photos/2116475/pexels-photo-2116475.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&fit=crop"
                 alt="Profile"
-                className="w-8 h-8 rounded-full object-cover ring-2 ring-emerald-500/30"
+                className="w-8 h-8 rounded-full object-cover ring-2 ring-brand-400/30"
               />
               <span className="text-sm font-medium text-zinc-300 hidden md:block">Alex Rivera</span>
               <ChevronDown className="w-4 h-4 text-zinc-500" />
@@ -71,7 +71,7 @@ export default function UserDashboard() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex-1 flex items-center justify-center gap-1.5 py-3 text-xs font-medium transition-colors ${
                 activeTab === tab.id
-                  ? 'text-emerald-400 border-b-2 border-emerald-500'
+                  ? 'text-brand-400 border-b-2 border-brand-400'
                   : 'text-zinc-500'
               }`}
             >

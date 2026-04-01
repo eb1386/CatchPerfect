@@ -10,9 +10,9 @@ const steps = [
     title: 'Mount the Sensor',
     description:
       'Attach the lightweight Catch Perfect sensor to your oar. It takes seconds to clip on and won\'t affect your stroke. The sensor uses a combination of accelerometers and gyroscopes to capture every movement of the oar throughout the rowing stroke.',
-    color: '#10b981',
-    colorLight: 'rgba(16, 185, 129, 0.12)',
-    colorBorder: 'rgba(16, 185, 129, 0.25)',
+    color: '#fec205',
+    colorLight: 'rgba(254, 194, 5, 0.12)',
+    colorBorder: 'rgba(254, 194, 5, 0.25)',
   },
   {
     icon: Activity,
@@ -70,10 +70,10 @@ export default function HowItWorks() {
 
       <div ref={ref} className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className={`max-w-3xl mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <p className="text-sm font-semibold text-emerald-400 tracking-widest uppercase mb-4">How It Works</p>
+          <p className="text-sm font-semibold text-brand-400 tracking-widest uppercase mb-4">How It Works</p>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
             Simple to use.
-            <span className="font-serif italic text-emerald-400"> Powerful</span> results.
+            <span className="font-serif italic text-brand-400"> Powerful</span> results.
           </h2>
           <p className="text-lg text-zinc-400 leading-relaxed">
             Catch Perfect is designed to disappear into your routine. No complex setup, no coaching certifications required.
@@ -108,7 +108,7 @@ export default function HowItWorks() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
                         ) : (
-                          <span className="text-sm font-bold" style={{ color: isActive ? '#fff' : '#a1a1aa' }}>
+                          <span className="text-sm font-bold" style={{ color: isActive ? '#17263a' : '#a1a1aa' }}>
                             {stepNum}
                           </span>
                         )}
@@ -152,8 +152,8 @@ export default function HowItWorks() {
                     <p className="text-base text-zinc-400 leading-relaxed mt-5">{activeStep.description}</p>
                     <Link
                       to="/user"
-                      className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:opacity-85 hover:gap-3"
-                      style={{ backgroundColor: activeStep.color }}
+                      className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-85 hover:gap-3"
+                      style={{ backgroundColor: activeStep.color, color: activeStep.color === '#fec205' ? '#17263a' : '#fff' }}
                     >
                       See What Users See
                       <ArrowRight className="w-4 h-4" />
@@ -171,7 +171,7 @@ export default function HowItWorks() {
                     <button
                       onClick={handleNext}
                       className="hiw-next-btn"
-                      style={{ backgroundColor: activeStep.color }}
+                      style={{ backgroundColor: activeStep.color, color: activeStep.color === '#fec205' ? '#17263a' : '#fff' }}
                     >
                       Next Step
                     </button>

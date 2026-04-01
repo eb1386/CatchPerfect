@@ -8,7 +8,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-white tracking-tight">
                 Catch
               </span>
-              <span className="text-xl font-serif italic text-emerald-400 tracking-tight">
+              <span className="text-xl font-serif italic text-brand-400 tracking-tight">
                 Perfect
               </span>
             </a>

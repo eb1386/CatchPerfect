@@ -27,7 +27,7 @@ export default function Waitlist() {
   return (
     <section id="waitlist" className="relative py-24 lg:py-32 bg-zinc-950 overflow-hidden">
       <Waves
-        lineColor="rgba(16,185,129,0.06)"
+        lineColor="rgba(254,194,5,0.06)"
         backgroundColor="transparent"
         waveSpeedX={0.008}
         waveSpeedY={0.006}
@@ -44,7 +44,7 @@ export default function Waitlist() {
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
             Be the First to
-            <span className="font-serif italic text-emerald-400"> Row Smarter</span>
+            <span className="font-serif italic text-brand-400"> Row Smarter</span>
           </h2>
           <p className="text-lg text-zinc-500 leading-relaxed max-w-2xl mx-auto">
             Join the waitlist to get early access when we launch.
@@ -54,8 +54,8 @@ export default function Waitlist() {
         <div className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {status === 'success' ? (
             <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-10 text-center">
-              <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-6">
-                <CheckCircle2 className="w-8 h-8 text-emerald-400" />
+              <div className="w-16 h-16 rounded-full bg-brand-400/10 border border-brand-400/20 flex items-center justify-center mx-auto mb-6">
+                <CheckCircle2 className="w-8 h-8 text-brand-400" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-3">You're on the list</h3>
               <p className="text-zinc-500 max-w-md mx-auto">
@@ -76,7 +76,7 @@ export default function Waitlist() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Your name"
-                    className="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/50 transition-all"
+                    className="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-brand-400/50 focus:border-brand-400/50 transition-all"
                   />
                 </div>
                 <div>
@@ -90,7 +90,7 @@ export default function Waitlist() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@example.com"
-                    className="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/50 transition-all"
+                    className="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-brand-400/50 focus:border-brand-400/50 transition-all"
                   />
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function Waitlist() {
                   id="role"
                   value={role}
                   onChange={(e) => setRole(e.target.value)}
-                  className="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500/50 transition-all appearance-none"
+                  className="w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-brand-400/50 focus:border-brand-400/50 transition-all appearance-none"
                 >
                   <option value="rower" className="bg-zinc-900">Rower</option>
                   <option value="coach" className="bg-zinc-900">Coach</option>

@@ -65,9 +65,9 @@ function TipCard({ label, tip, status }: { label: string; tip: LevelTip; status:
               <p className="text-xs text-zinc-300 leading-relaxed">{tip.advice}</p>
             </div>
           </div>
-          <div className="p-2.5 rounded-md bg-emerald-500/[0.04] border border-emerald-500/10">
+          <div className="p-2.5 rounded-md bg-brand-400/[0.04] border border-brand-400/10">
             <div className="flex items-start gap-2">
-              <Dumbbell className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-emerald-400" />
+              <Dumbbell className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-brand-400" />
               <p className="text-xs text-zinc-300 leading-relaxed">{tip.drill}</p>
             </div>
           </div>
@@ -89,14 +89,14 @@ function LevelSelector({ level, onChange }: { level: number; onChange: (l: numbe
             onClick={() => onChange(l)}
             className={`relative group flex-1 py-2 rounded-lg text-center transition-all duration-200 ${
               active
-                ? 'bg-emerald-500/15 border border-emerald-500/30'
+                ? 'bg-brand-400/15 border border-brand-400/30'
                 : 'bg-white/[0.02] border border-white/5 hover:bg-white/[0.04]'
             }`}
           >
-            <span className={`text-xs font-bold block ${active ? 'text-emerald-400' : 'text-zinc-500'}`}>
+            <span className={`text-xs font-bold block ${active ? 'text-brand-400' : 'text-zinc-500'}`}>
               {l}
             </span>
-            <span className={`text-[9px] block mt-0.5 ${active ? 'text-emerald-400/70' : 'text-zinc-600'}`}>
+            <span className={`text-[9px] block mt-0.5 ${active ? 'text-brand-400/70' : 'text-zinc-600'}`}>
               {info.name}
             </span>
           </button>
@@ -120,8 +120,8 @@ export default function BeginnerCoach({ metrics }: BeginnerCoachProps) {
     return (
       <div className="rounded-xl bg-white/[0.02] border border-white/5 p-4">
         <div className="flex items-center gap-2 mb-1">
-          <div className="w-6 h-6 rounded-md bg-emerald-500/10 flex items-center justify-center">
-            <Lightbulb className="w-3.5 h-3.5 text-emerald-400" />
+          <div className="w-6 h-6 rounded-md bg-brand-400/10 flex items-center justify-center">
+            <Lightbulb className="w-3.5 h-3.5 text-brand-400" />
           </div>
           <h4 className="text-sm font-semibold text-white">Coaching Tips</h4>
         </div>
@@ -135,8 +135,8 @@ export default function BeginnerCoach({ metrics }: BeginnerCoachProps) {
     <div className="rounded-xl bg-white/[0.02] border border-white/5 p-4">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-emerald-500/10 flex items-center justify-center">
-            <Lightbulb className="w-3.5 h-3.5 text-emerald-400" />
+          <div className="w-6 h-6 rounded-md bg-brand-400/10 flex items-center justify-center">
+            <Lightbulb className="w-3.5 h-3.5 text-brand-400" />
           </div>
           <div>
             <h4 className="text-sm font-semibold text-white">Coaching Tips</h4>

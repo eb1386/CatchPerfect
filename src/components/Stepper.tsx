@@ -20,7 +20,7 @@ export default function Stepper({
   backButtonText = 'Back',
   nextButtonText = 'Continue',
   disableStepIndicators = false,
-  accentColor = '#0ea5e9',
+  accentColor = '#fec205',
 }: StepperProps) {
   const [currentStep, setCurrentStep] = useState(initialStep);
   const [direction, setDirection] = useState(0);
@@ -192,8 +192,8 @@ function StepIndicator({
       <motion.div
         variants={{
           inactive: { scale: 1, backgroundColor: '#222', color: '#a3a3a3' },
-          active: { scale: 1, backgroundColor: accentColor, color: accentColor },
-          complete: { scale: 1, backgroundColor: accentColor, color: '#3b82f6' }
+          active: { scale: 1, backgroundColor: accentColor, color: '#17263a' },
+          complete: { scale: 1, backgroundColor: accentColor, color: '#17263a' }
         }}
         transition={{ duration: 0.3 }}
         className="stepper-indicator-inner"

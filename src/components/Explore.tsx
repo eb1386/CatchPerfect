@@ -34,7 +34,7 @@ export default function Explore() {
     <section id="explore" className="relative py-16 lg:py-20 bg-zinc-950 overflow-hidden">
       <div ref={ref} className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className={`max-w-3xl mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <p className="text-sm font-semibold text-emerald-400 tracking-widest uppercase mb-4">The Problem</p>
+          <p className="text-sm font-semibold text-brand-400 tracking-widest uppercase mb-4">The Problem</p>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
             Beginner rowers don't get the feedback they need.
           </h2>
@@ -58,7 +58,7 @@ export default function Explore() {
                   <div className="explore-accordion-header">
                     <div className="explore-accordion-left">
                       <div className={`explore-icon-box ${isOpen ? 'explore-icon-active' : ''}`}>
-                        <problem.icon className="w-5 h-5" style={{ color: isOpen ? '#10b981' : '#71717a' }} />
+                        <problem.icon className="w-5 h-5" style={{ color: isOpen ? '#fec205' : '#71717a' }} />
                       </div>
                       <span className={`text-base lg:text-lg font-semibold transition-colors duration-200 ${isOpen ? 'text-white' : 'text-zinc-400'}`}>
                         {problem.title}
