@@ -22,7 +22,7 @@ export default function DashboardStartNow() {
 
       <div className="grid lg:grid-cols-5 gap-6">
         <div className="lg:col-span-3 space-y-6">
-          <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-6">
+          <div className="rounded-2xl border border-brand-dark/40 bg-brand-dark/15 p-6">
             <h2 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-5">Sensor Status</h2>
 
             {!connected ? (

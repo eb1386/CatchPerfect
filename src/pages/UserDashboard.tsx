@@ -20,7 +20,7 @@ export default function UserDashboard() {
 
   return (
     <div className="min-h-screen bg-zinc-950">
-      <header className="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-white/5">
+      <header className="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-baseline gap-0.5">
             <span className="text-xl font-bold text-white tracking-tight">Catch</span>

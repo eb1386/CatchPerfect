@@ -4,7 +4,7 @@ export default function About() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="about" className="relative py-24 lg:py-32 bg-zinc-900 overflow-hidden">
+    <section id="about" className="relative py-24 lg:py-32 bg-brand-dark overflow-hidden">
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
         backgroundSize: '32px 32px'

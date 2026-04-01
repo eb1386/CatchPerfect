@@ -142,7 +142,7 @@ export default function FeedbackReport() {
         </div>
 
         <div className={`grid lg:grid-cols-2 gap-12 items-start transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 lg:p-8">
+          <div className="rounded-2xl border border-brand-dark/50 bg-brand-dark/20 p-6 lg:p-8">
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h3 className="text-lg font-bold text-white">Session Report</h3>

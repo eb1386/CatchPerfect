@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden flex items-center bg-zinc-950">
       <Waves
-        lineColor="rgba(255,255,255,0.08)"
+        lineColor="rgba(23,38,58,0.35)"
         backgroundColor="transparent"
         waveSpeedX={0.01}
         waveSpeedY={0.008}
@@ -34,14 +34,14 @@ export default function Hero() {
           <div className="opacity-0 animate-fade-in-up delay-400 flex flex-col sm:flex-row gap-4">
             <a
               href="#waitlist"
-              className="group inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-zinc-950 font-bold text-base hover:bg-zinc-200 hover:-translate-y-0.5 transition-all duration-300"
+              className="group inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-400 text-brand-dark font-bold text-base hover:bg-brand-300 hover:-translate-y-0.5 transition-all duration-300"
             >
               Join the Waitlist
               <ArrowDown className="ml-2 w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
             </a>
             <a
               href="#feedback"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full border border-zinc-700 text-white font-semibold text-base hover:border-zinc-500 hover:bg-white/5 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-dark border border-brand-dark text-white font-semibold text-base hover:bg-[#1e3250] hover:border-[#1e3250] transition-all duration-300"
             >
               See the Feedback
             </a>

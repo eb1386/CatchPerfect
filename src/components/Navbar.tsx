@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-zinc-950/90 backdrop-blur-xl shadow-lg shadow-black/10'
+          ? 'bg-brand-dark/95 backdrop-blur-xl shadow-lg shadow-black/20'
           : 'bg-transparent'
       }`}
     >
@@ -49,7 +49,7 @@ export default function Navbar() {
             ))}
             <a
               href="#waitlist"
-              className="px-5 py-2.5 rounded-full bg-white text-zinc-950 text-sm font-semibold hover:bg-zinc-200 transition-all duration-300"
+              className="px-5 py-2.5 rounded-full bg-brand-400 text-brand-dark text-sm font-semibold hover:bg-brand-300 transition-all duration-300"
             >
               Join Waitlist
             </a>
@@ -65,7 +65,7 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-zinc-950/95 backdrop-blur-xl border-t border-white/5">
+        <div className="md:hidden bg-brand-dark/95 backdrop-blur-xl border-t border-white/10">
           <div className="px-6 py-6 space-y-4">
             {links.map((link) => (
               <a
@@ -80,7 +80,7 @@ export default function Navbar() {
             <a
               href="#waitlist"
               onClick={() => setMobileOpen(false)}
-              className="block w-full text-center px-5 py-3 rounded-full bg-white text-zinc-950 text-sm font-semibold"
+              className="block w-full text-center px-5 py-3 rounded-full bg-brand-400 text-brand-dark text-sm font-semibold"
             >
               Join Waitlist
             </a>

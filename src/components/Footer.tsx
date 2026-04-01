@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-zinc-950 border-t border-white/5">
+    <footer className="bg-brand-dark border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
@@ -12,7 +12,7 @@ export default function Footer() {
                 Perfect
               </span>
             </a>
-            <p className="text-zinc-600 leading-relaxed text-sm max-w-xs">
+            <p className="text-zinc-400 leading-relaxed text-sm max-w-xs">
               Sensor-based rowing technique feedback. Train smarter. Row better. Improve every stroke.
             </p>
           </div>
@@ -29,7 +29,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-zinc-600 hover:text-white transition-colors"
+                    className="text-sm text-zinc-400 hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -40,12 +40,12 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Get In Touch</h4>
-            <p className="text-sm text-zinc-600 mb-4">
+            <p className="text-sm text-zinc-400 mb-4">
               Questions about Catch Perfect? Interested in partnerships?
             </p>
             <a
               href="#waitlist"
-              className="inline-flex px-5 py-2.5 rounded-full border border-white/10 text-sm text-zinc-500 hover:text-white hover:border-white/20 transition-all"
+              className="inline-flex px-5 py-2.5 rounded-full bg-brand-400 text-brand-dark text-sm font-semibold hover:bg-brand-300 transition-all"
             >
               Join the Waitlist
             </a>
@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <p className="text-xs text-zinc-700">
+          <p className="text-xs text-zinc-500">
             &copy; {new Date().getFullYear()} Catch Perfect. Created by Kyle Biemold.
           </p>
         </div>

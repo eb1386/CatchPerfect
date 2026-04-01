@@ -121,7 +121,7 @@ export default function Waitlist() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full group flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white text-zinc-950 font-bold text-base hover:bg-zinc-200 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full group flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-brand-400 text-brand-dark font-bold text-base hover:bg-brand-300 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? (
                   <>

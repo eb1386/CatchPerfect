@@ -130,7 +130,7 @@ export default function DashboardTrends() {
         ))}
       </div>
 
-      <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 mb-8">
+      <div className="rounded-2xl border border-brand-dark/40 bg-brand-dark/15 p-6 mb-8">
         <div className="flex items-center gap-3 mb-6">
           <TrendingUp className="w-5 h-5 text-brand-400" />
           <h2 className="text-lg font-bold text-white">Overall Score Over Time</h2>

@@ -62,7 +62,7 @@ export default function HowItWorks() {
   const activeStep = steps[currentStep - 1];
 
   return (
-    <section id="how" className="relative py-16 lg:py-24 bg-zinc-900 overflow-hidden">
+    <section id="how" className="relative py-16 lg:py-24 bg-brand-dark overflow-hidden">
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
         backgroundSize: '32px 32px'
